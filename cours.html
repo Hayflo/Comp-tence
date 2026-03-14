@@ -151,13 +151,54 @@
         }
 
         /* Responsive */
+        @media (max-width: 1024px) {
+            .section-title {
+                font-size: 2.2rem;
+            }
+        }
+
         @media (max-width: 768px) {
             .nav-links {
                 gap: 1rem;
+                flex-wrap: wrap;
             }
 
             .section-title {
                 font-size: 2rem;
+            }
+
+            section {
+                padding: 60px 1rem;
+            }
+
+            .course-card {
+                padding: 1.5rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            nav {
+                padding: 0.5rem 1rem;
+            }
+
+            .logo {
+                font-size: 1.5rem;
+            }
+
+            .nav-links {
+                gap: 0.5rem;
+            }
+
+            .section-title {
+                font-size: 1.8rem;
+            }
+
+            .course-card {
+                padding: 1rem;
+            }
+
+            .course-title {
+                font-size: 1.1rem;
             }
         }
     </style>
