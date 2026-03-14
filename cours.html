@@ -152,6 +152,45 @@
             margin-bottom: 0.5rem;
         }
 
+        .course-objectives-dropdown {
+            margin: 0 0 1rem 0;
+            border: 1px solid rgba(102, 126, 234, 0.25);
+            border-radius: 8px;
+            padding: 0.5rem 1rem;
+            background: rgba(102, 126, 234, 0.05);
+        }
+
+        .course-objectives-dropdown summary {
+            list-style: none;
+            cursor: pointer;
+            font-weight: 600;
+            color: #333;
+        }
+
+        .course-objectives-dropdown summary::-webkit-details-marker {
+            display: none;
+        }
+
+        .course-objectives-dropdown summary::before {
+            content: '\25B6';
+            display: inline-block;
+            width: 1em;
+            transform: rotate(0deg);
+            transition: transform 0.2s ease;
+            margin-right: 0.5rem;
+        }
+
+        .course-objectives-dropdown[open] summary::before {
+            transform: rotate(90deg);
+        }
+
+        .course-objectives-content {
+            overflow: hidden;
+            height: 0;
+            opacity: 0;
+            transition: height 0.25s ease, opacity 0.25s ease;
+        }
+
         .course-date {
             color: #667eea;
             font-weight: bold;
@@ -241,31 +280,103 @@
             <!-- Exemple de cours - Vous pouvez ajouter/modifier ici -->
             <div class="course-card">
                 <h3 class="course-title">Virtualisation cloud et Datacenter avancée / Nutanix</h3>
-                <p class="course-objectives">Objectifs pédagogiques :</p>
-                <ul class="course-objectives-list">
-                    <li>Décrire les concepts du Software-Defined Data Center et les composants clés de vSphere.</li>
-                    <li>Ajouter et gérer des hôtes ESXi et AHV via VMware vCenter Server Appliance ou Prism Central.</li>
-                    <li>Utiliser une bibliothèque de contenu local (magasin ISO) et déployer des machines virtuelles.</li>
-                    <li>Configurer et administrer une infrastructure vSphere avec VMware Host Client et Nutanix vSphere Client.</li>
-                    <li>Concevoir et gérer des réseaux virtuels avec les switches vSphere standards et leurs stratégies.</li>
-                    <li>Gérer des VM, modèles, clones et snapshots, et migrer des VM avec vMotion / Storage vMotion.</li>
-                    <li>Surveiller l'utilisation des ressources et gérer les pools de ressources.</li>
-                    <li>Présenter l'architecture du cluster Nutanix HA, configurer Nutanix HA, vSphere HA et FT (Fault Tolerance).</li>
-                </ul>
+                <details class="course-objectives-dropdown">
+                    <summary>Objectifs pédagogiques</summary>
+                    <div class="course-objectives-content">
+                        <ul class="course-objectives-list">
+                            <li>Décrire les concepts du Software-Defined Data Center et les composants clés de vSphere.</li>
+                            <li>Ajouter et gérer des hôtes ESXi et AHV via VMware vCenter Server Appliance ou Prism Central.</li>
+                            <li>Utiliser une bibliothèque de contenu local (magasin ISO) et déployer des machines virtuelles.</li>
+                            <li>Configurer et administrer une infrastructure vSphere avec VMware Host Client et Nutanix vSphere Client.</li>
+                            <li>Concevoir et gérer des réseaux virtuels avec les switches vSphere standards et leurs stratégies.</li>
+                            <li>Gérer des VM, modèles, clones et snapshots, et migrer des VM avec vMotion / Storage vMotion.</li>
+                            <li>Surveiller l'utilisation des ressources et gérer les pools de ressources.</li>
+                            <li>Présenter l'architecture du cluster Nutanix HA, configurer Nutanix HA, vSphere HA et FT (Fault Tolerance).</li>
+                        </ul>
+                    </div>
+                </details>
                 <p class="course-date">Semestre 1 - 2025</p>
             </div>
             <div class="course-card">
-                <h3 class="course-title">Réseaux Informatiques</h3>
-                <p class="course-objectives">Objectifs pédagogiques : Maîtriser les protocoles réseau (TCP/IP, HTTP, etc.), configurer et dépanner des équipements réseau, comprendre les architectures réseau (LAN, WAN), assurer la sécurité des réseaux.</p>
-                <p class="course-date">Semestre 1 - 2024</p>
+                <h3 class="course-title">Management de projet</h3>
+                <details class="course-objectives-dropdown">
+                    <summary>Objectifs pédagogiques</summary>
+                    <div class="course-objectives-content">
+                        <ul class="course-objectives-list">
+                            <li>Comprendre les concepts de base du management de projet SI.</li>
+                            <li>Comprendre les livrables de chaque étape d'un projet.</li>
+                            <li>Acquérir les connaissances fondamentales de gestion des risques SI.</li>
+                            <li>S'initier au pilotage de projet SI.</li>
+                            <li>Identifier les rôles, responsabilités et acteurs clés.</li>
+                            <li>Maîtriser les méthodologies de projet (Waterfall, V, Agile, Scrum).</li>
+                            <li>Planifier un projet via les outils Gantt, PERT et chemin critique.</li>
+                            <li>Intégrer qualité, RH, risques et communication dans le pilotage.</li>
+                        </ul>
+                    </div>
+                </details>
+                <p class="course-date">Semestre 1 - 2025</p>
             </div>
             <div class="course-card">
                 <h3 class="course-title">Cloud Computing</h3>
-                <p class="course-objectives">Objectifs pédagogiques : Comprendre les modèles de cloud (IaaS, PaaS, SaaS), déployer et gérer des applications sur AWS et Azure, optimiser les coûts et la performance, assurer la sécurité dans le cloud.</p>
-                <p class="course-date">Semestre 2 - 2024</p>
+                <details class="course-objectives-dropdown">
+                    <summary>Objectifs pédagogiques</summary>
+                    <div class="course-objectives-content">
+                        <ul class="course-objectives-list">
+                            <li>Comprendre les modèles de cloud (IaaS, PaaS, SaaS).</li>
+                            <li>Déployer et gérer des applications sur AWS et Azure.</li>
+                            <li>Optimiser les coûts et la performance.</li>
+                            <li>Assurer la sécurité dans le cloud.</li>
+                        </ul>
+                    </div>
+                </details>
+                <p class="course-date">Semestre 2 - 2025</p>
             </div>
             <!-- Ajoutez vos cours ici -->
         </div>
     </section>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            document.querySelectorAll('.course-objectives-dropdown').forEach(details => {
+                const summary = details.querySelector('summary');
+                const content = details.querySelector('.course-objectives-content');
+
+                // Ensure content is hidden initially
+                content.style.overflow = 'hidden';
+                content.style.height = '0';
+
+                const animate = (open) => {
+                    const startHeight = content.getBoundingClientRect().height;
+                    const targetHeight = open ? content.scrollHeight : 0;
+
+                    content.style.height = startHeight + 'px';
+                    content.style.opacity = open ? '1' : '0';
+
+                    requestAnimationFrame(() => {
+                        content.style.height = targetHeight + 'px';
+                    });
+                };
+
+                summary.addEventListener('click', (event) => {
+                    event.preventDefault();
+                    const open = details.hasAttribute('open');
+
+                    if (open) {
+                        animate(false);
+                        content.addEventListener('transitionend', function handler() {
+                            details.removeAttribute('open');
+                            content.removeEventListener('transitionend', handler);
+                        });
+                    } else {
+                        details.setAttribute('open', '');
+                        animate(true);
+                        content.addEventListener('transitionend', function handler() {
+                            content.style.height = 'auto';
+                            content.removeEventListener('transitionend', handler);
+                        });
+                    }
+                });
+            });
+        });
+    </script>
 </body>
 </html>
